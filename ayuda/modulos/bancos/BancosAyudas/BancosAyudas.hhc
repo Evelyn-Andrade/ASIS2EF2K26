@@ -44,6 +44,10 @@
 			<param name="Local" value="Moneda_Bancos.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Pacientes_Bancos">
+			<param name="Local" value="Pacientes_Bancos.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="TipoCuentaBancaria_Bancos">
 			<param name="Local" value="TipoCuentaBancaria_Bancos.html">
 			</OBJECT>

@@ -110,6 +110,10 @@
 		<param name="Local" value="GeneracionPagos_Bancos.html#ordenes">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pacientes">
+		<param name="Local" value="Pacientes_Bancos.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Preparar orden de pago">
 		<param name="Local" value="GeneracionPagos_Bancos.html#preparar">
 		</OBJECT>

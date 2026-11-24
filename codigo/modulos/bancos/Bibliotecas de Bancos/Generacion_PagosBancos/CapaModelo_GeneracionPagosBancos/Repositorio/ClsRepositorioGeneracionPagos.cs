@@ -120,6 +120,12 @@ namespace CapaModelo_GeneracionPagos.Repositorio
             "CASE WHEN is_active = 1 THEN 'Activa' ELSE 'Inactiva' END AS Estado " +
             "FROM tblMoneda ORDER BY codigoMoneda";
 
+        private const string SelectReportePacientes =
+            "SELECT pk_idPaciente AS Codigo, nombrePaciente AS Nombre, apellidoPaciente AS Apellido, fechaNacimientoPaciente AS FechaNacimiento, " +
+            "sexoPaciente AS Sexo, direccionPaciente AS Direccion, telefonoPaciente AS Telefono, " +
+            "CASE WHEN estadoPaciente = 1 THEN 'Activo' ELSE 'Inactivo' END AS Estado " +
+            "FROM tbl_paciente ORDER BY pk_idPaciente";
+
         private const string SelectDatosOrden =
             "SELECT o.idOrdenPago, o.referenciaOrdenPago, o.beneficiarioOrdenPago, o.importeOrdenPago, o.medioOrdenPago, o.estadoOrdenPago, " +
             "o.Fk_CuentaBancaria_Codigo, CONCAT(b.nombreBanco, ' ', c.numeroCuentaBancaria, ' (', m.codigoMoneda, ')') AS Cuenta, " +
@@ -366,6 +372,11 @@ namespace CapaModelo_GeneracionPagos.Repositorio
         public DataTable BancosMetConsultarReporteMonedas()
         {
             return BancosMetEjecucionConsulta(SelectReporteMonedas, CommandType.Text, BancosFuncParametros());
+        }
+
+        public DataTable BancosMetConsultarReportePacientes()
+        {
+            return BancosMetEjecucionConsulta(SelectReportePacientes, CommandType.Text, BancosFuncParametros());
         }
 
         public DataTable BancosMetObtenerDatosOrden(long IdOrden)

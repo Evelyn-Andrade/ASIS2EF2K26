@@ -123,6 +123,24 @@ namespace CapaControlador_GeneracionPagos
             }
         }
 
+        public string BancosMetConsultarReportePacientes(out DataTable Resultado)
+        {
+            Resultado = null;
+            try
+            {
+                Resultado = _Repositorio.BancosMetConsultarReportePacientes();
+                return string.Empty;
+            }
+            catch (OdbcException)
+            {
+                return "Error de base de datos al consultar los pacientes.";
+            }
+            catch (Exception)
+            {
+                return "Error inesperado al consultar los pacientes.";
+            }
+        }
+
         public DataTable BancosMetObtenerDatosOrden(long IdOrden)
         {
             return _Repositorio.BancosMetObtenerDatosOrden(IdOrden);

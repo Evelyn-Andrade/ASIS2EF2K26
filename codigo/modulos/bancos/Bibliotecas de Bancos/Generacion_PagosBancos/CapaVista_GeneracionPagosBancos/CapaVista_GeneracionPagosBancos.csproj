@@ -91,6 +91,12 @@
     <Compile Include="Formularios\FrmMonedaNavegador.Designer.cs">
       <DependentUpon>FrmMonedaNavegador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmPacientesNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPacientesNavegador.Designer.cs">
+      <DependentUpon>FrmPacientesNavegador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteGeneracionPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <EmbeddedResource Include="Formularios\FrmMonedaNavegador.resx">
       <DependentUpon>FrmMonedaNavegador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPacientesNavegador.resx">
+      <DependentUpon>FrmPacientesNavegador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteGeneracionPagos.resx">
       <DependentUpon>FrmReporteGeneracionPagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,7 +141,13 @@
     <EmbeddedResource Include="Reportes\RpReporteMoneda.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsAvisoVencimiento.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsControladorGeneracionPagos.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsDatosRegistro.datasource" />
     <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsModeloMoneda.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsResultadoOperacion.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsResumenVencimientos.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_GeneracionPagos.ClsValoresPagoVista.datasource" />
     <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Resources\btn_salirB.png" />
   </ItemGroup>

@@ -187,5 +187,11 @@ namespace CapaVista_Bancos.Formularios
                 this.Close();
             }
         }
+
+        private void BancosBtnPacientes_Click(object sender, EventArgs e)
+        {
+            FrmPacientesNavegador pacientesNavegador = new FrmPacientesNavegador();
+            pacientesNavegador.ShowDialog();
+        }
     }
 }
